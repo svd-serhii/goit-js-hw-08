@@ -31,7 +31,7 @@ function onFormInput(evt) {
 function populateTextarea() {
   const savedText = JSON.parse(localStorage.getItem(FEEDBACK_FORM));
   if (savedText) {
-    refs.form.email.value = savedText.email;
-    refs.form.message.value = savedText.message;
+    refs.form.email.value = savedText.email || '';
+    refs.form.message.value = savedText.message || '';
   }
 }
